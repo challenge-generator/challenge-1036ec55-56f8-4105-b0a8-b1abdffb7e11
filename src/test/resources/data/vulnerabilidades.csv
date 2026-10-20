@@ -1,0 +1,16 @@
+codigo_vulnerabilidad,tipo,criticidad,descripcion,puntuacion_cvss,estado,fecha_deteccion,metodo_deteccion,impacto_potencial,mitigacion_aplicada
+VULN-001,Inyeccion SQL,Crítica,Campo de búsqueda vulnerable a inyección SQL mediante caracteres especiales,9.8,Pendiente,2024-01-15,Análisis de código,Exfiltración de datos de clientes,Usar PreparedStatement
+VULN-002,XSS Reflejado,Alta,Parámetro de URL vulnerable a XSS reflejado en formulario de login,7.2,Pendiente,2024-01-16,Pruebas automatizadas,Robo de cookies de sesión,Validar y escapar entrada del usuario
+VULN-003,Autenticación Débil,Crítica,Mecanismo de autenticación permite más de 5 intentos sin bloqueo,9.1,Pendiente,2024-01-17,Revisión manual,Acceso no autorizado a cuentas,Implementar política de bloqueo
+VULN-004,Exposición de Datos Sensibles,Crítica,Credenciales almacenadas en texto plano en archivo de configuración,9.5,Resuelta,2024-01-10,Auditoría de seguridad,Compromiso de sistema,Cifrar configuración con AES-256
+VULN-005,CSRF,Media,Token CSRF no implementado en formulario de transferencias,5.3,Pendiente,2024-01-18,Análisis de código,Falsificación de solicitudes,Implementar tokens CSRF
+VULN-006,Broken Access Control,Alta,Usuario puede acceder a recursos de otro usuario mediante ID manipulation,7.8,Pendiente,2024-01-19,Pruebas de autorización,Acceso no autorizado a datos,Validar permisos en cada solicitud
+VULN-007,Insecure Deserialization,Crítica,API acepta objetos serializados sin validación,9.1,Pendiente,2024-01-20,Análisis de código,Ejecución de código remoto,Validar tipo de datos
+VULN-008,Security Misconfiguration,Alta,Depurador habilitado en entorno de producción,6.5,Resuelta,2024-01-11,Escaneo automatizado,Exposición de información,Deshabilitar modo debug
+VULN-009,Using Components with Known Vulnerabilities,Crítica,Biblioteca vulnerable a CVE-2023-XXXX,9.0,Pendiente,2024-01-21,SBOM analysis,Ejecución de código,Actualizar a versión segura
+VULN-010,Insufficient Logging,Media,Aplicación no registra intentos de autenticación fallidos,4.3,Resuelta,2024-01-12,Revisión de logs,Detección tardía de ataques,Implementar logging de seguridad
+VULN-011,Inyección LDAP,Alta,Campo de búsqueda vulnerable a inyección LDAP,7.7,Pendiente,2024-01-22,Pruebas de penetración,Acceso no autorizado a directorio,Validar entrada y usar JNDI
+VULN-012,XXE,Crítica,Parser XML vulnerable a ataques XXE,9.1,Pendiente,2024-01-23,Fuzzing,Exfiltración de archivos locales,Deshabilitar procesamiento DTD
+VULN-013,SSRF,Alta,Parámetro de URL vulnerable a SSRF,8.6,Pendiente,2024-01-24,Análisis de código,Acceso a servicios internos,Lista blanca de URLs
+VULN-014,Command Injection,Crítica,Campo de entrada vulnerable a inyección de comandos del sistema,9.8,Pendiente,2024-01-25,Pruebas de seguridad,Compromiso total del servidor,Validar y sanitizar entrada
+VULN-015,Path Traversal,Alta,Parámetro de archivo vulnerable a path traversal,7.5,Pendiente,2024-01-26,Análisis de código,Acceso a archivos del sistema,Validar ruta de archivo
